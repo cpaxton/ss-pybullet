@@ -1203,6 +1203,12 @@ def get_min_limit(body, joint):
 def get_max_limit(body, joint):
     return get_joint_limits(body, joint)[1]
 
+def get_min_limits(body, joint):
+    return [get_joint_limits(body, j)[0] for j in joint]
+
+def get_max_limits(body, joint):
+    return [get_joint_limits(body, j)[1] for j in joint]
+
 def get_max_velocity(body, joint):
     return get_joint_info(body, joint).jointMaxVelocity
 
